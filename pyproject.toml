@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qlbs"
+version = "0.1.0"
+description = "Q-learning for option pricing and hedging (QLBS) with Black-Scholes and Monte Carlo benchmarks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Atharva Dhoot" }]
+dependencies = ["numpy>=1.24", "scipy>=1.11", "pandas>=2.0", "matplotlib>=3.7", "tabulate>=0.9"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "jupyter", "nbconvert"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
