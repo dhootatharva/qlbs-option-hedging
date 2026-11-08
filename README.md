@@ -1,5 +1,9 @@
 # QLBS: Option Pricing and Hedging with Reinforcement Learning
 
+[![tests](https://github.com/dhootatharva/qlbs-option-hedging/actions/workflows/tests.yml/badge.svg)](https://github.com/dhootatharva/qlbs-option-hedging/actions/workflows/tests.yml)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Pricing and hedging a European option as a **Markov decision process**, following Halperin's QLBS model ("Q-Learner in the Black-Scholes(-Merton) Worlds"). The hedger's problem is cast as stochastic optimal control with a quadratic (mean-variance) risk objective under discrete rebalancing, then solved two ways:
 
 - **Dynamic programming:** model-based backward recursion, with the hedge and the Q-function expanded in B-spline features.
